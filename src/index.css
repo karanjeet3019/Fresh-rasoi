@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-brand-cream: #FDFBF7;
+  --color-brand-green: #2D5A27;
+  --color-brand-orange: #F27D26;
+  --color-brand-light-green: #E8F0E5;
+  --color-brand-deep-green: #1B3D1B;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-slate-800 font-sans;
+  }
+}
+
+.nav-link-active {
+  @apply bg-white/10 border-l-4 border-brand-orange text-white shadow-none rounded-none;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-4 transition-all hover:shadow-md;
+}
+
+.btn-primary {
+  @apply bg-brand-orange hover:opacity-90 text-white font-bold px-4 py-2 rounded-xl transition-all active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-brand-green hover:opacity-90 text-white font-bold px-4 py-2 rounded-xl transition-all active:scale-95;
+}
+
+.btn-ghost {
+  @apply hover:bg-slate-100 text-slate-600 font-medium px-4 py-2 rounded-xl transition-all;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-all bg-white;
+}
+
+.label {
+  @apply block text-sm font-semibold text-slate-600 mb-1 ml-1;
+}
+
+.status-active { @apply text-green-700 bg-green-100; }
+.status-paused { @apply text-amber-700 bg-amber-100; }
+.status-cancelled { @apply text-rose-700 bg-rose-100; }
+
+.pay-paid { @apply text-green-700 bg-green-100; }
+.pay-soon { @apply text-orange-700 bg-orange-100; }
+.pay-today { @apply text-blue-700 bg-blue-100; }
+.pay-overdue { @apply text-red-700 bg-red-100; }
+
